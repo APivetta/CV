@@ -7,8 +7,9 @@
 \moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage{multicol}
-\usepackage[scale=0.75]{geometry} % Reduce document margins
-\setlength{\hintscolumnwidth}{3.1cm} % Uncomment to change the width of the dates column
+\usepackage{geometry}
+\geometry{hscale = 0.8, vscale = 0.89}
+\setlength{\hintscolumnwidth}{3.15cm} % Uncomment to change the width of the dates column
 \setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 \newcommand{\ulo}{\textsuperscript{\b{o}}}
 
@@ -21,19 +22,27 @@
 
 
 %\title{Curriculum Vitae}
-\address{Jun\'in 683}{City of Buenos Aires}
-\mobile{(+54 11) 5317-1037}
+\address{City of Buenos Aires}{Argentina}
+\mobile{+54 11 5317-1037}
 \email{aguspivetta@gmail.com}
-\homepage{https://github.com/apivetta}{github.com/apivetta} 
-\extrainfo{ar.linkedin.com/in/apivetta}
-%\photo[70pt][0.4pt]{fotoCv.jpg}
-%\quote{"Quote" - Author}
+\homepage{ar.linkedin.com/in/apivetta}{ar.linkedin.com/in/apivetta} 
+% \extrainfo{}
+
+% \quote{"Quote" - Author}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\makecvtitle % Print the CV title
+\makecvtitle 
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\cventry{Ongoing}{Software Engineering}{CAECE University}{5th year}{Avg: 7 out of 10}{Expected graduation date: July 2020}
+\strut
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -41,42 +50,51 @@
 
 \section{Work Experience}
 
-\cventry{Mar 2017 -- To date}{Full Stack Developer}{\textsc{Elementum}}{City of Buenos Aires}{}{
-Duties:
-\begin{itemize}
-\item Web applications development using React and AngularJs.
-\item Mobile applications development using Ionic Framework.
-\item APIs and services development using Node.js
-\end{itemize}}
+\cventry{Nov 2018 -- To date}{Senior Software Engineer}{\textsc{Medallia}}{City of Buenos Aires}{}{
+\vspace{1mm}
+\textbf{Duties:} Contributing on scaling Medallia Conversations product across current and new Medallia customers.\
+Working on several Node.js microservices with an emphasis on product quality, precise execution and code reviews to further improve the quality of the product.\
+Reworking the current CI pipeline to save build time and reduce tests inconsistencies.
+\\
+\textbf{Technologies:} Node.js, Apache Kafka, PostgreSQL, Cassandra, Redis, Jenkins
+}
 \strut
 
 %------------------------------------------------
 
-\cventry{Jan 2016 -- Mar 2017}{Full Stack Developer}{\textsc{Government of the city of Buenos Aires}}{Undersecretariat of Transit and Transport}{City of Buenos Aires}{
-Duties:
-\begin{itemize}
-\item Web applications development using AngularJs.
-\item Mobile applications development using Ionic Framework.
-\item Dashboards and data visualizations using Leaflet and D3.js.
-\item APIs and services development using Node.js and Python.
-\item Design and implementation of IoT solutions on Microsoft Azure Cloud.
-\end{itemize}}
+\cventry{Mar 2017 -- Nov 2018}{Senior Fullstack Developer}{\textsc{Elementum}}{City of Buenos Aires}{}{
+\vspace{1mm}
+\textbf{Duties:} Served as a primary technical point of contact for Product teams and other stakeholders.\
+Worked with various of Elementum's web applications and Node.js microservices to deliver impressive and relevant visualizations for our customers' business use cases.
+\\
+\textbf{Technologies:} React, AngularJS, Node.js, Socket.io, Apache Kafka, MongoDB, Elasticsearch, Redis
+}
 \strut
 
 %------------------------------------------------
 
-\cventry{Sep 2014 -- Dec 2015}{Full Stack Developer}{\textsc{National Congress of Argentina}}{Parliamentary Digital Services}{City of Buenos Aires}{
-Duties:
-\begin{itemize}
-\item Web applications development using AngularJs.
-\item APIs and services development using Node.Js.
-\item APIs development using xQuery and eXistdb.
-\end{itemize}}
+\cventry{Jan 2016 -- Mar 2017}{Fullstack Developer}{\textsc{Government of the city of Buenos Aires}}{Department of Transit and Transport}{City of Buenos Aires}{
+\vspace{1mm}
+\textbf{Duties:} Worked on several of the Department's projects, ranging from data visualizations to assist decision making to developing the Frontend and APIs of a PoC aimed at enforcing heavy vehicles lanes throughout the city.
+\\
+\textbf{Technologies:} AngularJS, Node.js, Ionic, Leaflet, D3.js, Microsoft Azure Cloud
+}
 \strut
 
 %------------------------------------------------
 
-\cventry{Feb 2013 -- Sep 2014}{SAP ABAP Developer}{\textsc{TGV Excelencia en Soluciones Inform\'aticas}}{City of Buenos Aires}{}{}
+\cventry{Sep 2014 -- Dec 2015}{Fullstack Developer}{\textsc{National Congress of Argentina}}{Parliamentary Digital Services}{City of Buenos Aires}{
+\vspace{1mm}
+\textbf{Duties:} Worked as part of a team developing services to parse and transform laws and other parliamentary documents from text to Akoma Ntoso XML schema (\href{http://www.akomantoso.org/}{http://www.akomantoso.org/}).\
+Worked in the Frontend and APIs of parts of the National Congress of Argentina web page.
+\\
+\textbf{Technologies:} AngularJS, Node.js, xQuery, eXist-db
+}
+\strut
+
+%------------------------------------------------
+
+\cventry{Feb 2013 -- Sep 2014}{SAP ABAP Developer}{\textsc{TGV}}{City of Buenos Aires}{}{}
 \strut
 
 %------------------------------------------------
@@ -85,42 +103,22 @@ Duties:
 \strut
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Education}
-\cventry{Ongoing}{Software Engineering}{CAECE University}{5th year}{Avg: 7}{Expected graduation date: Dec 2019}
-\strut
-
-%----------------------------------------------------------------------------------------
 %	COURSES SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Courses}
+% \section{Courses}
 
-\cventry{Apr 2016}{Advanced Leaflet workshop}{\textsc{Conference for Free and Open Source Software for Geospatial}}{\textsc{National Geographic Institute}}{Duration: 8hs}{}
-\strut
-\cventry{Nov 2016}{Microsoft Azure training course}{}{\textsc{Microsoft}}{Duration: 40hs}{}{}
-\strut
+% \cventry{[DATE]}{[TITLE]}{\textsc{[LECTURER]}}{\textsc{[PLACE]}}{Duration: N hs}{}
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Skills and Tools}
+\section{Software Skills}
 
-\cvlistdoubleitem{JavaScript}{Styled-components}
-\cvlistdoubleitem{Node.Js}{SASS}
-\cvlistdoubleitem{HTML5/CSS}{Angular Material}
-\cvlistdoubleitem{React}{PostgreSQL}
-\cvlistdoubleitem{AngularJs}{MongoDB}
-\cvlistdoubleitem{Express}{Elasticsearch}
-\cvlistdoubleitem{Socket.io}{Redis}
-\cvlistdoubleitem{Redux}{Apache Kafka}
-\cvlistdoubleitem{Redux-sagas}{Python}
-\cvlistdoubleitem{D3.js}{Java}
-\cvlistdoubleitem{Webpack}{ABAP}
-
+\cvitemwithcomment{Proficient}{JavaScript, HTML/CSS, Unix, Git}{}
+\cvitemwithcomment{Familiar}{Python, Java, Scala}{}
+\cvitemwithcomment{Interested on}{Go, Rust}{}
 \strut
 
 %----------------------------------------------------------------------------------------
@@ -129,7 +127,7 @@ Duties:
 
 \section{Language Skills}
 
-\cvitemwithcomment{Spanish}{Native speaker}{}
-\cvitemwithcomment{English}{Fluent}{}
+\cvitemwithcomment{Native speaker}{Spanish}{}
+\cvitemwithcomment{Fluent}{English}{}
 
 \end{document}
